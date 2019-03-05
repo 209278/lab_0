@@ -8,17 +8,19 @@ public class TailsGenerator {
 
     public List<String> tails(String value) {
 
-        if(value==null){
+        if (value == null) {
             return Collections.emptyList();
         }
 
-        ArrayList<String> arrayList=new ArrayList<>();
+        ArrayList<String> arrayList = new ArrayList<>();
 
-        do{
+        do {
             arrayList.add(value);
-            value=value.substring( 1 );
-        }while(value.length() > 0);
+            value = value.substring(1);
+        } while (value.length() > 0);
+
         arrayList.add(value);
+
         return arrayList;
     }
 
