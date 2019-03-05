@@ -11,11 +11,15 @@ public class TailsGenerator {
         if(value==null){
             return Collections.emptyList();
         }
-        
-        do{
 
-        }while(!value.equals(""))
-        return new ArrayList<>(value.length());
+        ArrayList<String> arrayList=new ArrayList<>();
+
+        do{
+            arrayList.add(value);
+            value=value.substring( 1 );
+        }while(value.length() > 0);
+        arrayList.add(value);
+        return arrayList;
     }
 
 }
